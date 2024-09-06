@@ -5,7 +5,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 app = Flask(__name__)
 
 # Load the GPT-2 model and tokenizer
-model_name = 'gpt2'
+model_name = 'gpt2-small' # Using a smaller model variant
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 model = GPT2LMHeadModel.from_pretrained(model_name)
 
