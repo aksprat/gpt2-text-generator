@@ -1,0 +1,32 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-2 Text Generator</title>
+</head>
+<body>
+    <h1>Generative AI - Text Generator</h1>
+    <textarea id="prompt" placeholder="Enter a prompt here..." rows="5" cols="50"></textarea>
+    <br>
+    <button onclick="generateText()">Generate</button>
+    <p id="generatedText"></p>
+
+    <script>
+        async function generateText() {
+            const prompt = document.getElementById("prompt").value;
+            const response = await fetch('/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ prompt }),
+            });
+
+            const data = await response.json();
+            document.getElementById("generatedText").innerText = data.generated_text;
+        }
+    </script>
+</body>
+</html>
