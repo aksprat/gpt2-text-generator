@@ -9,13 +9,21 @@ Here’s a detailed plan for setting up a Generative AI demo:
 
 **Objective:**
 Show how to use an open-source generative AI model like GPT-2 for text generation.
+
 Deploy the model on a server (droplet) or an App Platform on DigitalOcean.
+
 Create a simple web interface where users can input a prompt, and the model will generate text based on it.
 
 **Tech Stack:**
-Model: GPT-2 (from Hugging Face Transformers)
-Backend: Python (Flask/FastAPI) to serve the model API
-Frontend: Simple HTML/JS or React for a dynamic interface
-Deployment: DigitalOcean Droplet or DigitalOcean App Platform
-Docker: For containerizing the application
-Nginx: Optionally as a reverse proxy for production
+**Model**: GPT-2 (from Hugging Face Transformers)
+
+**Backend**: Python (Flask/FastAPI) to serve the model API
+
+**Frontend**: Simple HTML/JS or React for a dynamic interface
+
+**Deployment**: DigitalOcean Droplet or DigitalOcean App Platform
+
+**Docker**: For containerizing the application
+
+**Nginx**: Optionally as a reverse proxy for production
+
