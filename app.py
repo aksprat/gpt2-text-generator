@@ -18,7 +18,7 @@ def generate():
     inputs = tokenizer.encode(prompt, return_tensors='pt')
 
     # Generate text
-    outputs = model.generate(inputs, max_length=100, num_return_sequences=1)
+    outputs = model.generate(inputs, max_length=50, num_return_sequences=1)
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
     return jsonify({"generated_text": generated_text})
