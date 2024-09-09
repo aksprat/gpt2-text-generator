@@ -3,6 +3,9 @@ from flask import Flask, request, jsonify
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return "Welcome to GPT-2 Text Generator!", 200
 
 # Load the GPT-2 model and tokenizer
 model_name = 'gpt2'
